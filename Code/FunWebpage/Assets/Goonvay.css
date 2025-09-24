@@ -1,0 +1,56 @@
+/* CSS */
+@font-face {
+    font-family: 'Sus';
+    src: url(Fonts/Super\ Malibu.ttf);
+}
+
+@font-face {
+    font-family: 'SusHeaders';
+    src: url(Fonts/Pink\ Shine.ttf);
+}
+
+html,
+body {
+    height: 100%;
+    /* make sure they stretch full height */
+    margin: 0;
+    /* remove default spacing */
+}
+
+body {
+    text-align: center;
+    background: linear-gradient(red, orange, yellow, lightgreen, lightblue, rgb(255, 0, 255), red);
+}
+
+.fontsus {
+    font-family: 'SusHeaders'
+}
+
+p {
+    font-family: 'Sus'
+}
+
+.lockedIn {
+    font-family: 'Sus'
+}
+
+.tab-content {
+    display: none;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.active {
+    display: block;
+}
+
+
+
+button {
+    margin-right: 5px;
+    padding: 12px 24px;
+    cursor: pointer;
+    font-family: 'Sus';
+    background-color: transparent;
+    border-radius: 10px
+}

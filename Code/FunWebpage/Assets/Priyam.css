@@ -1,0 +1,154 @@
+/* Afish Archives Styles (DROP THIS IN Assets/AfishArchives.css) */
+
+/* Custom Fonts */
+@font-face {
+    font-family: 'HeaderFont';
+    src: url(../Assets/Fonts/Bidenatrial.ttf);
+  }
+  @font-face {
+    font-family: 'ButtonFont';
+    src: url(../Assets/Fonts/Mileast.otf);
+  }
+  
+  /* Body */
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* h1 stays at top */
+    align-items: center;
+    background: #000;
+    font-family: 'HeaderFont', "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #fff;
+  }
+  
+  /* Paragraph text */
+  p {
+    font-family: 'ButtonFont';
+    color: #fff;
+    font-size: 20px;
+  }
+  
+  /* Header - sticky at top, with glow (use class "glow-text") */
+  h1 {
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    font-size: 2.5rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    font-family: 'HeaderFont';
+  }
+  
+  /* Reusable glow text style (for any element you want rainbow-glow on) */
+  .glow-text {
+    position: relative;
+    font-size: 56px;
+    font-weight: 500;
+    letter-spacing: -0.015em;
+    color: #fff;
+    z-index: 1;
+    font-family: 'HeaderFont';
+  }
+  
+  /* Decorative glow layers for text */
+  .glow-text::before {
+    content: attr(data-text);
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, #00cfff, #a600ff, #ff006e, #ff8800);
+    filter: blur(20px) brightness(0.85);
+    opacity: 0.75;
+    z-index: -1;
+    pointer-events: none;
+    background-size: 200% 200%;
+    animation: gradientShift 12s ease-in-out infinite;
+    border-radius: 12px;
+  }
+  .glow-text::after {
+    content: attr(data-text);
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, #00cfff, #a600ff, #ff006e, #ff8800);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    mix-blend-mode: color-burn;
+    filter: blur(3px) brightness(1.2);
+    z-index: 0;
+    pointer-events: none;
+    background-size: 200% 200%;
+    animation: gradientShift 12s ease-in-out infinite;
+  }
+  
+  /* Button (glowing rainbow like header) */
+  /* Base button style */
+.button {
+    font-family: 'ButtonFont';
+    margin-top: 40px;
+    background: #333;  
+    border: none;
+    color: white;
+    padding: 14px 34px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform .25s ease, box-shadow .25s ease;
+    position: relative;
+    z-index: 1;
+    overflow: visible; 
+    box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+  }
+  
+  /* Hover effect: add rainbow glow shadow */
+  .button:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 12px 30px rgba(91,134,229,0.18);
+  }
+  
+  /* Create glowing background only when hovered */
+  .button:hover::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 160%;
+    height: 160%;
+    border-radius: 16px;
+    background: linear-gradient(90deg, #00cfff, #a600ff, #ff006e, #ff8800);
+    background-size: 200% 200%;
+    filter: blur(22px) saturate(1.2);
+    opacity: 0.9;
+    z-index: -1;
+    pointer-events: none;
+    animation: gradientShift 2s ease-in-out infinite;
+  }
+  
+  /* Optional: inner subtle highlight */
+  .button::after {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    border-radius: 12px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+    z-index: 0;
+    pointer-events: none;
+  }
+  
+  
+  /* ONE single keyframes definition used by both header & button */
+  @keyframes gradientShift {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
