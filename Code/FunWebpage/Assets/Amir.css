@@ -2,104 +2,103 @@
 
 /* Custom Fonts */
 @font-face {
-    font-family: 'HeaderFont';
-    src: url(Fonts/Pink\ Shine.ttf);
-  }
-  
-  @font-face {
-    font-family: 'ButtonFont';
-    src: url(Fonts/Super\ Malibu.ttf);
-  }
-  
-  /* Body Styling */
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: 'HeaderFont';
-    background: linear-gradient(135deg, #ff9ce3, #fbc2eb, #fda085);
-    color: #fff0f6;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-attachment: fixed;
-    overflow-x: hidden;
-  }
-  
-  /* Page Title */
-  h1 {
-    width: 100%;
-    text-align: center;
-    margin: 0;
-    padding: 30px;
-    font-size: 3.5rem;
-    line-height: 1.4;
-    letter-spacing: 12px;
-    background: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(12px);
-    text-transform: uppercase;
-    color: #ffe6f0;
-    text-shadow: 
-        0 0 8px rgba(255, 200, 255, 0.9),
-        0 0 20px rgba(255, 120, 200, 0.8),
-        0 0 40px rgba(255, 100, 180, 0.7);
-    position: sticky;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    border-bottom: 3px solid rgba(255, 255, 255, 0.3);
-  }
-  
+  font-family: 'HeaderFont';
+  src: url(/Fonts/Pink\ Shine.ttf);
+}
 
-  p {
-    font-family: 'ButtonFont';
-    color: #fff;
-    font-size: 20px;
-  }
-  
-  /* Stylish Anime Button */
-  .button {
-    font-family: 'ButtonFont';
-    margin-top: 80px;
-    background: linear-gradient(145deg, #ff6fd8, #ff66a6, #ff3cac);
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    color: #fff8fc;
-    padding: 20px 46px;
-    font-size: 1.5rem;
-    font-weight: bold;
-    border-radius: 50px;
-    cursor: pointer;
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-    box-shadow: 0 10px 25px rgba(255, 80, 160, 0.5);
-    text-shadow: 0 0 8px rgba(255, 200, 250, 0.8);
-  }
-  
-  /* Glow on hover */
-  .button:hover {
-    transform: translateY(-5px) scale(1.08);
-    box-shadow: 0 0 35px rgba(255, 150, 220, 0.9),
-                0 0 70px rgba(255, 80, 160, 0.7);
-  }
-  
-  /* Subtle press */
-  .button:active {
-    transform: translateY(0) scale(0.95);
-    box-shadow: 0 6px 15px rgba(255, 80, 160, 0.5);
-  }
-  
-  /* Continuous sparkle shine */
-  .button::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -90%;
-    width: 50%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.4);
-    transform: skewX(-25deg);
-    border-radius: inherit;
-  }
-  
+@font-face {
+  font-family: 'ButtonFont';
+  src: url(/Fonts/Super\ Malibu.ttf);
+}
+
+/* Body Styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'HeaderFont';
+  background: linear-gradient(135deg, #ff9ce3, #fbc2eb, #fda085);
+  color: #fff0f6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+/* Page Title */
+h1 {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 30px;
+  font-size: 3.5rem;
+  line-height: 1.4;
+  letter-spacing: 12px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+  text-transform: uppercase;
+  color: #ffe6f0;
+  text-shadow:
+    0 0 8px rgba(255, 200, 255, 0.9),
+    0 0 20px rgba(255, 120, 200, 0.8),
+    0 0 40px rgba(255, 100, 180, 0.7);
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+
+p {
+  font-family: 'ButtonFont';
+  color: #fff;
+  font-size: 20px;
+}
+
+/* Stylish Anime Button */
+.button {
+  font-family: 'ButtonFont';
+  margin-top: 80px;
+  background: linear-gradient(145deg, #ff6fd8, #ff66a6, #ff3cac);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  color: #fff8fc;
+  padding: 20px 46px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 10px 25px rgba(255, 80, 160, 0.5);
+  text-shadow: 0 0 8px rgba(255, 200, 250, 0.8);
+}
+
+/* Glow on hover */
+.button:hover {
+  transform: translateY(-5px) scale(1.08);
+  box-shadow: 0 0 35px rgba(255, 150, 220, 0.9),
+    0 0 70px rgba(255, 80, 160, 0.7);
+}
+
+/* Subtle press */
+.button:active {
+  transform: translateY(0) scale(0.95);
+  box-shadow: 0 6px 15px rgba(255, 80, 160, 0.5);
+}
+
+/* Continuous sparkle shine */
+.button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -90%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.4);
+  transform: skewX(-25deg);
+  border-radius: inherit;
+}
