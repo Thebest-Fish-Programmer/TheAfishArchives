@@ -1,2 +1,4 @@
+# Python version
+python_version==3.13
 Flask==2.3.6
 Jinja2==3.1.3
