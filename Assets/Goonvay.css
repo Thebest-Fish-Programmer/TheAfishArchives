@@ -54,3 +54,21 @@ button {
     background-color: transparent;
     border-radius: 10px
 }
+
+.button {
+    font-family: 'Sus';
+    margin-top: 60px;
+    background: transparent;
+    border: none;
+    color: black;
+    padding: 16px 36px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border-radius: 14px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}

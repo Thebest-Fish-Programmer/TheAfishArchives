@@ -6,9 +6,3 @@ function showTab(tabId) {
 
     document.getElementById(tabId).classList.add('active');
 }
-
-
-function loadTemplate(file) {
-    window.location.href = file;
-  }
-  
