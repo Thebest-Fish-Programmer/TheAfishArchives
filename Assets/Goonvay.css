@@ -32,10 +32,15 @@ body {
     font-size: 2rem;
 }
 
-p,
-.lockedIn {
+p {
     font-family: 'Sus', sans-serif;
     font-size: 1rem;
+    word-wrap: break-word;
+}
+
+.lockedIn {
+    font-family: 'Sus', sans-serif;
+    font-size: 2rem;
     word-wrap: break-word;
 }
 
