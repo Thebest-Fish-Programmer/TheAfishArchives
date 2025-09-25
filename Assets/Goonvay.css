@@ -1,74 +1,167 @@
-/* CSS */
+/* =========================
+   Custom Fonts
+========================= */
 @font-face {
     font-family: 'Sus';
-    src: url(Fonts/Super\ Malibu.ttf);
+    src: url('Fonts/Super Malibu.ttf');
 }
 
 @font-face {
     font-family: 'SusHeaders';
-    src: url(Fonts/Pink\ Shine.ttf);
+    src: url('Fonts/Pink Shine.ttf');
 }
 
+/* =========================
+   Global Styles
+========================= */
 html,
 body {
     height: 100%;
-    /* make sure they stretch full height */
     margin: 0;
-    /* remove default spacing */
-}
-
-body {
+    font-family: 'Sus', sans-serif;
     text-align: center;
     background: linear-gradient(red, orange, yellow, lightgreen, lightblue, rgb(255, 0, 255), red);
+    overflow-x: hidden;
 }
 
+/* =========================
+   Typography
+========================= */
 .fontsus {
-    font-family: 'SusHeaders'
+    font-family: 'SusHeaders', sans-serif;
+    font-size: 2rem;
 }
 
-p {
-    font-family: 'Sus'
-}
-
+p,
 .lockedIn {
-    font-family: 'Sus'
+    font-family: 'Sus', sans-serif;
+    font-size: 1rem;
+    word-wrap: break-word;
 }
 
+/* =========================
+   Tabs
+========================= */
 .tab-content {
     display: none;
     padding: 10px;
     margin-top: 5px;
 }
 
-.active {
+.tab-content.active {
     display: block;
 }
 
-
-
-button {
-    margin-right: 5px;
-    padding: 12px 24px;
-    cursor: pointer;
-    font-family: 'Sus';
-    background-color: transparent;
-    border-radius: 10px
-}
-
+/* =========================
+   Buttons
+========================= */
+button,
 .button {
-    font-family: 'Sus';
-    margin-top: 60px;
-    background: transparent;
-    border: none;
-    color: black;
-    padding: 16px 36px;
-    font-size: 1.3rem;
-    font-weight: bold;
-    border-radius: 14px;
+    font-family: 'Sus', sans-serif;
     cursor: pointer;
+    border-radius: 14px;
+    border: none;
+    background-color: transparent;
     position: relative;
     z-index: 1;
     overflow: hidden;
     transition: transform 0.15s ease, box-shadow 0.15s ease;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+
+/* Standard buttons */
+button {
+    margin: 5px;
+    padding: 12px 24px;
+    font-size: 1rem;
+}
+
+/* Main call-to-action buttons */
+.button {
+    margin-top: 60px;
+    padding: 16px 36px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: black;
+}
+
+/* Button container for stacking and spacing */
+.button-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.button-container button,
+.button-container .button {
+    display: inline-block;
+}
+
+/* =========================
+   Responsive Styles
+========================= */
+
+/* Tablet */
+@media (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+
+    .fontsus {
+        font-size: 1.8rem;
+    }
+
+    button,
+    .button {
+        padding: 14px 28px;
+        font-size: 1.1rem;
+        margin-top: 40px;
+    }
+
+    .tab-content {
+        padding: 8px;
+        margin-top: 8px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    html {
+        font-size: 12px;
+    }
+
+    body {
+        padding: 10px;
+    }
+
+    .fontsus {
+        font-size: 1.5rem;
+    }
+
+    button,
+    .button {
+        width: 90%;
+        max-width: 300px;
+        padding: 12px 20px;
+        font-size: 1rem;
+        margin-top: 20px;
+    }
+
+    .tab-content {
+        padding: 5px;
+        margin-top: 5px;
+    }
+
+    /* Stack buttons vertically */
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button-container button,
+    .button-container .button {
+        width: 90%;
+        max-width: 300px;
+    }
 }
