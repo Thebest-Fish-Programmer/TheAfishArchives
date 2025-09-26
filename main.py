@@ -40,6 +40,9 @@ def havish_page():
 def havish_relationship_page():
     return render_template("Havish_relation.html")
 
+@app.route("/Havish/W_Havish")
+def havish_W_page():
+    return render_template("Havish_glaze.html")
 # Amir
 @app.route("/Amir")
 def amir_page():    
