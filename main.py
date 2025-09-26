@@ -49,6 +49,20 @@ def amir_page():
 def amir_relationship_page():
     return render_template("Amir_relation.html")
 
+# Danny
+@app.route("/Danny")
+def danny_page():
+    return render_template("PeopleArchives/Danny.html")
+
+@app.route("/Danny/WDannyPhotos")
+def danny_photos_page():    
+    return render_template("WDannyPhotos.html")
+
+# Secret Page
+
+@app.route("/Afish")
+def afish_page():
+    return render_template("Secret_Page.html")
 
 # 404 Handler
 

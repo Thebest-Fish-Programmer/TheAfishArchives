@@ -1,0 +1,174 @@
+/* Afish Archives Styles (DROP THIS IN Assets/AfishArchives.css) */
+
+/* Custom Fonts */
+@font-face {
+    font-family: 'HeaderFont';
+    src: url(../Assets/Fonts/Bidenatrial.ttf);
+}
+
+@font-face {
+    font-family: 'ButtonFont';
+    src: url(../Assets/Fonts/Mileast.otf);
+}
+
+/* Body */
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: radial-gradient(circle at center, #3b0a0a 0%, #0d0d0d 100%);
+    font-family: 'HeaderFont', "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #f5f5dc;
+    /* parchment gold tone */
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* Paragraph text */
+p {
+    font-family: 'ButtonFont';
+    color: #f0e6d2;
+    font-size: 20px;
+    line-height: 1.6;
+    max-width: 800px;
+    text-align: center;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Header - stage banner style */
+h1 {
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    font-size: 2.5rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: linear-gradient(180deg, rgba(20, 0, 0, 0.9), rgba(60, 0, 0, 0.8));
+    border-bottom: 3px solid #ffd700;
+    font-family: 'HeaderFont';
+    color: #ffd700;
+    /* golden */
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+}
+
+/* Divider (program style) */
+.divider {
+    width: 60%;
+    height: 3px;
+    margin: 30px 0;
+    background: linear-gradient(to right, transparent, #ffd700, transparent);
+    border-radius: 3px;
+}
+
+/* Button - velvet with golden accents */
+.button {
+    font-family: 'ButtonFont';
+    margin-top: 40px;
+    background: linear-gradient(180deg, #400000, #200000);
+    border: 2px solid #ffd700;
+    color: #ffd700;
+    padding: 14px 34px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform .25s ease, box-shadow .25s ease, background .4s ease;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+}
+
+/* Hover effect */
+.button:hover {
+    transform: translateY(-4px) scale(1.03);
+    background: linear-gradient(180deg, #600000, #300000);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.8),
+        0 0 40px rgba(255, 140, 0, 0.6);
+}
+
+/* Inner highlight */
+.button::after {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    border-radius: 10px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.1));
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Subtle spotlight effect on page */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at top center, rgba(255, 215, 0, 0.12), transparent 70%),
+        radial-gradient(circle at bottom center, rgba(255, 140, 0, 0.1), transparent 80%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Portfolio Image Styling */
+img {
+    width: auto;
+    height: 500px;
+    margin: 40px auto;
+    border-radius: 18px;
+    display: block;
+    box-shadow:
+        0 6px 20px rgba(0, 0, 0, 0.7),
+        0 0 20px rgba(255, 215, 0, 0.3);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    position: relative;
+    z-index: 1;
+}
+
+/* Hover spotlight effect */
+img:hover {
+    transform: scale(1.05);
+    box-shadow:
+        0 10px 28px rgba(0, 0, 0, 0.8),
+        0 0 30px rgba(255, 215, 0, 0.6),
+        0 0 50px rgba(255, 140, 0, 0.5);
+}
+
+
+video {
+    width: auto;
+    height: 500px;
+    margin: 40px auto;
+    border-radius: 18px;
+    display: block;
+    box-shadow:
+        0 6px 20px rgba(0, 0, 0, 0.7),
+        0 0 20px rgba(255, 215, 0, 0.3);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    position: relative;
+    z-index: 1;
+}
+
+/* Hover spotlight effect */
+video:hover {
+    transform: scale(1.05);
+    box-shadow:
+        0 10px 28px rgba(0, 0, 0, 0.8),
+        0 0 30px rgba(255, 215, 0, 0.6),
+        0 0 50px rgba(255, 140, 0, 0.5);
+}
+
+/* Optional caption styling */
+.portfolio-caption {
+    margin-top: 12px;
+    font-family: 'ButtonFont';
+    font-size: 1.1rem;
+    color: #ffd700;
+    text-align: center;
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.7);
+}
